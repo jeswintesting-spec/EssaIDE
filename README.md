@@ -1,5 +1,14 @@
 # EssaIDE
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Textual](https://img.shields.io/badge/Textual-1e1e1e?style=for-the-badge&logo=python&logoColor=white)
+![Tree-sitter](https://img.shields.io/badge/Tree--sitter-7b8182?style=for-the-badge)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![MIT License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
+
+
 **EssaIDE** is an ultra-fast, cross-platform, AI-powered terminal IDE built entirely in Python using the Textual framework. Designed for the modern terminal, it brings native syntax highlighting, a multi-pane split view, an integrated shell, a live server, and sandboxed extensions into a beautiful, mouse-friendly CLI UI.
 
 It is fully capable of running natively on macOS, Linux, and Windows.
