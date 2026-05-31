@@ -17,12 +17,16 @@ It is fully capable of running natively on macOS, Linux, and Windows.
 
 ## 🚀 Features
 
+- **Language Server Protocol (LSP):** Native `python-lsp-server` integration providing intelligent Autocompletion (`Ctrl+Space`), Hover Docs (`Ctrl+H`), and Go To Definition (`F12`).
+- **Real-Time Diagnostics:** Live syntax checking and linting powered by LSP, directly rendering into a visual 'Problems' dashboard.
+- **Git Source Control:** A built-in Git sidebar for viewing branch status, diffs, and committing modified files without leaving the editor.
+- **Visual Interactive Debugger:** First-class integration with Python's `pdb`. Set breakpoints and visually step line-by-line (`F10`/`F11`) with real-time editor highlighting.
+- **Auto-Formatter:** Instantly reformat your messy code to PEP-8 standards using the integrated `black` formatter (`F8`).
+- **Persistent Workspaces:** Automatically saves your IDE preferences (like Dark Mode and split views) to `.essa_settings.json`.
 - **Multi-color Syntax Highlighting:** Powered by `tree-sitter` for flawless AST-based syntax coloring.
 - **Integrated Interactive Terminal:** A fully asynchronous, built-in shell emulator.
 - **Live HTTP Server:** Instantly host your workspace locally via the Command Palette.
-- **Split Views:** Horizontally and vertically split text editors to boost productivity.
 - **Sandboxed Extensions:** Secure plugin architecture with workspace trust mechanisms.
-- **Theme Engine:** Instantly swap between themes like Monokai, VS Code Dark, Dracula, and GitHub Light.
 - **Fuzzy Command Palette:** Press `Ctrl+Shift+P` to access any action instantly.
 
 ---
@@ -89,6 +93,12 @@ If you want to install EssaIDE globally so you can launch it from any directory 
 - **`Ctrl+O`** : Open Workspace Folder
 - **`Ctrl+N`** : Create New File
 - **`Ctrl+S`** : Save Current File
+- **`Ctrl+Space`** : Trigger Autocomplete
+- **`Ctrl+H`** : Hover Documentation
+- **`F12`** : Go To Definition
+- **`F8`** : Auto-Format Code (Black)
+- **`Ctrl+Y`** : Launch Interactive Debugger
+- **`F10` / `F11`** : Step Over / Step In (Debugger)
 - **`Ctrl+F`** : Search across workspace
 - **`F2`** : Open Settings Dashboard
 - **`Ctrl+Q`** : Quit Application
@@ -115,6 +125,7 @@ EssaIDE is organized into four main areas:
 1. **Activity Bar (Leftmost Edge):** Contains quick-access icons to toggle your sidebars.
    - 📁 **Files:** Opens the Directory Explorer.
    - 🔍 **Search:** Opens the Global Search panel.
+   - 🌿 **Git:** Opens the Source Control sidebar.
    - 🧩 **Extensions:** Opens the Plugin & Security Manager.
    - ⚙️ **Settings:** Opens the Settings Dashboard.
 2. **Sidebar (Left Panel):** Contextually changes based on the Activity Bar selection.
@@ -149,7 +160,28 @@ Both scripts will automatically spawn the IDE in your terminal.
 
 ---
 
-## 3. Advanced Features
+## 3. Professional IDE Features
+
+### Python Language Server (LSP)
+EssaIDE uses `python-lsp-server` under the hood to give you intelligent code assistance.
+- **Autocomplete (`Ctrl+Space`)**: Press this while typing to open a suggestion modal.
+- **Hover Docs (`Ctrl+H`)**: Highlight a function and press this to view its docstrings.
+- **Go To Definition (`F12`)**: Jumps your cursor directly to where the function or class was defined.
+- **Real-Time Diagnostics**: If you write invalid Python syntax, the IDE will dynamically pipe the error into the **Problems** tab in your Bottom Panel.
+
+### Git Version Control
+Click the 🌿 **Git** icon in the Activity Bar to open the Source Control panel. It runs `git status` asynchronously to show your modified files. You can type a commit message and press **Commit All** to automatically stage and commit your changes without using the CLI.
+
+### Visual Interactive Debugger
+Instead of printing to a console, you can debug visually.
+1. Press `Ctrl+Y` to launch the Interactive Debugger.
+2. The Bottom Panel will open the **Debugger** tab.
+3. The IDE will step through the code natively, highlighting the executing line in your code window. Use **F10** (Step Over) and **F11** (Step In) to traverse your code dynamically.
+
+### Black Auto-Formatter
+Press `F8` or use the Command Palette to instantly format your active Python file perfectly using `black`.
+
+## 4. Advanced Features
 
 ### 🖥️ Integrated Terminal
 EssaIDE ships with a fully asynchronous pseudo-terminal emulator built directly into the bottom panel.

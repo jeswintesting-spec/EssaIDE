@@ -41,3 +41,4 @@ ENV/
 # OS files
 .DS_Store
 Thumbs.db
+.essa_settings.json

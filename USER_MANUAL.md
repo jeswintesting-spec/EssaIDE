@@ -13,6 +13,7 @@ EssaIDE is organized into four main areas:
 1. **Activity Bar (Leftmost Edge):** Contains quick-access icons to toggle your sidebars.
    - 📁 **Files:** Opens the Directory Explorer.
    - 🔍 **Search:** Opens the Global Search panel.
+   - 🌿 **Git:** Opens the Source Control sidebar.
    - 🧩 **Extensions:** Opens the Plugin & Security Manager.
    - ⚙️ **Settings:** Opens the Settings Dashboard.
 2. **Sidebar (Left Panel):** Contextually changes based on the Activity Bar selection.
@@ -47,7 +48,28 @@ Both scripts will automatically spawn the IDE in your terminal.
 
 ---
 
-## 3. Advanced Features
+## 3. Professional IDE Features
+
+### Python Language Server (LSP)
+EssaIDE uses `python-lsp-server` under the hood to give you intelligent code assistance.
+- **Autocomplete (`Ctrl+Space`)**: Press this while typing to open a suggestion modal.
+- **Hover Docs (`Ctrl+H`)**: Highlight a function and press this to view its docstrings.
+- **Go To Definition (`F12`)**: Jumps your cursor directly to where the function or class was defined.
+- **Real-Time Diagnostics**: If you write invalid Python syntax, the IDE will dynamically pipe the error into the **Problems** tab in your Bottom Panel.
+
+### Git Version Control
+Click the 🌿 **Git** icon in the Activity Bar to open the Source Control panel. It runs `git status` asynchronously to show your modified files. You can type a commit message and press **Commit All** to automatically stage and commit your changes without using the CLI.
+
+### Visual Interactive Debugger
+Instead of printing to a console, you can debug visually.
+1. Press `Ctrl+Y` to launch the Interactive Debugger.
+2. The Bottom Panel will open the **Debugger** tab.
+3. The IDE will step through the code natively, highlighting the executing line in your code window. Use **F10** (Step Over) and **F11** (Step In) to traverse your code dynamically.
+
+### Black Auto-Formatter
+Press `F8` or use the Command Palette to instantly format your active Python file perfectly using `black`.
+
+## 4. Advanced Features
 
 ### 🖥️ Integrated Terminal
 EssaIDE ships with a fully asynchronous pseudo-terminal emulator built directly into the bottom panel.
