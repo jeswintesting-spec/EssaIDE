@@ -23,6 +23,12 @@ EssaIDE is organized into four main areas:
 
 ## 2. Core Workflows
 
+### Launching the IDE
+EssaIDE includes one-click automation scripts to handle environments and dependencies for you.
+- **Windows:** Double-click `start_windows.bat` from your file explorer.
+- **macOS / Linux:** Run `./start_unix.sh` from your terminal.
+Both scripts will automatically spawn the IDE in your terminal.
+
 ### Opening a Project
 1. Press `Ctrl+O` or `Ctrl+Shift+P` -> Select **Open Folder**.
 2. Type the absolute path to your project directory.

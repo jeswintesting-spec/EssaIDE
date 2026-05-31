@@ -33,25 +33,18 @@ Make sure you have **Python 3.10+** installed on your system.
    cd EssaIDE
    ```
 
-2. **Create a virtual environment (Recommended):**
-   - **Linux / macOS:**
-     ```bash
-     python3 -m venv venv
-     source venv/bin/activate
-     ```
-   - **Windows:**
-     ```cmd
-     python -m venv venv
-     venv\Scripts\activate
-     ```
+2. **Launch the IDE (Automated Setup):**
+   - **Windows:** Double-click `start_windows.bat`
+   - **Linux / macOS:** Run `./start_unix.sh`
+   
+   *(These scripts automatically create a virtual environment, install all required dependencies, and launch the IDE for you.)*
 
-3. **Install the dependencies:**
+3. **(Optional) Manual Setup:**
+   If you prefer to set it up manually:
    ```bash
+   python3 -m venv venv
+   source venv/bin/activate # (or venv\Scripts\activate on Windows)
    pip install -r requirements.txt
-   ```
-
-4. **Launch the IDE:**
-   ```bash
    python main.py
    ```
 
@@ -97,6 +90,7 @@ If you want to install EssaIDE globally so you can launch it from any directory 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+
 ---
 
 Welcome to **EssaIDE**, a high-performance, AI-powered terminal-based IDE designed to bring the capabilities of desktop editors (like VS Code) directly into your command-line environment.
@@ -121,6 +115,12 @@ EssaIDE is organized into four main areas:
 ---
 
 ## 2. Core Workflows
+
+### Launching the IDE
+EssaIDE includes one-click automation scripts to handle environments and dependencies for you.
+- **Windows:** Double-click `start_windows.bat` from your file explorer.
+- **macOS / Linux:** Run `./start_unix.sh` from your terminal.
+Both scripts will automatically spawn the IDE in your terminal.
 
 ### Opening a Project
 1. Press `Ctrl+O` or `Ctrl+Shift+P` -> Select **Open Folder**.
