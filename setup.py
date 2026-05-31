@@ -13,11 +13,13 @@ setup(
     description="A powerful, highly-optimized terminal IDE built with Textual.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    py_modules=["main"],
+    py_modules=["main", "lsp_client", "pdb_client"],
     install_requires=[
         "textual[syntax]>=0.81.0",
         "rich==13.7.1",
-        "requests==2.32.3"
+        "requests==2.32.3",
+        "python-lsp-server>=1.11.0",
+        "black>=24.0.0"
     ],
     entry_points={
         "console_scripts": [
